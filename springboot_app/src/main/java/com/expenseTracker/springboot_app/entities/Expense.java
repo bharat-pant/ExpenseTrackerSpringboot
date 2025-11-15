@@ -9,7 +9,6 @@ import java.time.LocalDateTime;
 /* Expense Class to store Expense data which will be used to
    map and store multiple transaction done by user */
 
-@Entity
 @Getter
 @Setter
 
