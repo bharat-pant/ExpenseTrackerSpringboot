@@ -1,23 +1,26 @@
 package com.expenseTracker.springboot_app.entities;
 
-import jakarta.persistence.Entity;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 /* User Class to store User data which will be used to
    map and store multiple user when they do login */
 
 @Entity
+@Table(name = "userTable")
 @Getter
 @Setter
 public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String name;
     private String password;
     private String email;
-    private LocalDateTime createdAt;
+    private LocalDate createdAt;
 
     @Override
     public String toString() {

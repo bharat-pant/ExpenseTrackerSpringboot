@@ -8,8 +8,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 
-public class UserDTO {
-    private long id;
+public class CreateUserDTO {
     private String name;
     private String password;
     private String email;
@@ -17,9 +16,8 @@ public class UserDTO {
 
     @Override
     public String toString() {
-        return "UserDTO{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
+        return "AddUserDTO{" +
+                "name='" + name + '\'' +
                 ", password='" + password + '\'' +
                 ", email='" + email + '\'' +
                 ", createdAt=" + createdAt +
